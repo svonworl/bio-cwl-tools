@@ -1,0 +1,95 @@
+version: 1.2
+tools:
+# GATK
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-ApplyBQSR.cwl
+     name: GATK-ApplyBQSR
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-BaseRecalibrator.cwl
+     name: GATK-BaseRecalibrator
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-CNNScoreVariants.cwl
+     name: GATK-CNNScoreVariants
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-FilterMutectCalls.cwl
+     name: GATK-FilterMutectCalls
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-FilterVariantTranches.cwl
+     name: GATK-FilterVariantTranches
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-FixMateInformation.cwl
+     name: GATK-FixMateInformation
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-HaplotypeCaller.cwl
+     name: GATK-HaplotypeCaller
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-MarkDuplicates.cwl
+     name: GATK-MarkDuplicates
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-SelectVariants.cwl
+     name: GATK-SelectVariants
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-SplitNCigarReads.cwl
+     name: GATK-SplitNCigarReads
+   - subclass: CWL
+     primaryDescriptorPath: /GATK/GATK-VariantFiltration.cwl
+     name: GATK-VariantFiltration
+# bowtie        
+   - subclass: CWL
+     primaryDescriptorPath: /bowtie/bowtie_align.cwl
+     name: bowtie_align
+     testParameterFiles:
+         - /bowtie/tests/bowtie_align_t1.json
+         - /bowtie/tests/bowtie_align_t2.json
+         - /bowtie/tests/bowtie_align_t3.json
+   - subclass: CWL
+     primaryDescriptorPath: /bowtie/bowtie_build.cwl
+     name: bowtie_build
+     testParameterFiles:
+         - /bowtie/tests/bowtie_build_t1.json
+# bwa
+   - subclass: CWL
+     primaryDescriptorPath: /bwa/BWA-Index.cwl
+     name: BWA-Index
+   - subclass: CWL
+     primaryDescriptorPath: /bwa/BWA-Mem.cwl
+     name: BWA-Mem
+   - subclass: CWL
+     primaryDescriptorPath: /nextclade/nextclade.cwl
+     name: nextclade
+     testParameterFiles:
+         - /nextclade/tests/nextclade_t1.yml        
+# samtools         
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_faidx.cwl
+     name: samtools_faidx
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_fastq.cwl
+     name: samtools_fastq
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_index.cwl
+     name: samtools_index
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_merge.cwl
+     name: samtools_merge
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_sort.cwl
+     name: samtools_sort
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_stats.cwl
+     name: samtools_stats
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_view_count_alignments.cwl
+     name: samtools_view_count_alignments
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_view_filter.cwl
+     name: samtools_view_filter
+   - subclass: CWL
+     primaryDescriptorPath: /samtools/samtools_view_sam2bam.cwl
+     name: samtools_view_sam2bam     
+   - subclass: CWL
+     primaryDescriptorPath: /subread/featureCounts.cwl
+     name: featureCounts           
+   - subclass: CWL
+     primaryDescriptorPath: /trim_galore/trim_galore.cwl
+     name: trim_galore        
